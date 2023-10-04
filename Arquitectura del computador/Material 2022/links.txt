@@ -1,0 +1,10 @@
+deb with gdb : https://sourceware.org/gdb/current/onlinedocs/gdb/index.html#SEC_Contents
+gdb dep de proy gnu: https://www.sourceware.org/gdb/documentation/
+gcc comp: https://gcc.gnu.org/
+lectura sobre errores de representacion: https://elultimoversodefermat.wordpress.com/2020/01/09/la-guerra-es-siempre-el-mayor-error/
+manual intel 64 and 32 arch: https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html
+arm dev doc: https://developer.arm.com/documentation
+arm tuto: http://computerscience.chemeketa.edu/armTutorial/index.html
+intro a openCL: https://ulhpc-tutorials.readthedocs.io/en/latest/gpu/opencl/
+fpga: https://planetachatbot.com/que-es-fpga-y-por-que-jugaran-papel-clave-en-futuro/
+fundamentos sistemas operativos: https://ru.iiec.unam.mx/2718/1/sistemas_operativos.pdf
