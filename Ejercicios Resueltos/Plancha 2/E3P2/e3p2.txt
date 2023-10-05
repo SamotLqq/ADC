@@ -1,0 +1,71 @@
+n1 = 100 = 0b0110 0100 
+n2 = 120 = 0b0111 1000
+n3 = -63 = -(0b0011 1111) = 0b1100 0001
+n4 = -56 = -(0b0011 1000) = 0b1100 1000
+n5 = -91 = -(0b0101 1011) = 0b1010 0101
+
+a) indicar la CF y OF de las operaciones.
+    
+    1) S1 = N1 + N2
+    S1 = 100 + 120 =>
+
+	    0110 0100
+     +	0111 1000
+	    =========
+	    1101 1100
+
+	Luego CF=0 y OF=1 ya que no genera un acarreo pero si opera con ambos bits mas 
+significativos iguales y devuelve uno diferente.
+
+
+
+    2) S2 = N3 + N4
+    S2 = (-63) + (-56) =>
+	
+	    1100 0001
+     +	1100 1000
+	    =========
+       11000 1001
+	
+	Luego CF=1 y OF=0. Porque tiene un acarreo del bit mas significativo y los dos
+bits mas significativos se mantienen igual por lo que la OF se queda en 0.
+
+
+
+    3) S3 = N3 + N5
+    S3 = (-63) + (-91) =>
+
+	    1100 0001
+     +	1010 0101
+	    =========
+       10110 0110
+
+	Luego CF=1 y OF=1. La suma hace que haya un acarreo en el bit mas significativos por
+lo que CF se activa y como la suma es de mismos bits en el mas significativo y da un 
+resultado de otro bit por lo que OF se activa.
+
+
+
+    4) S4 = N2 - N4
+    S4 = 120 - (-56) => 120 + 56
+
+	0111 1000
+  - 1100 1000
+	=========
+   11011 0000
+
+	Luego CF=1 y OF=1. Como hay acarreo se prende la CF y como la resta se fue del rango se prende
+la OF.
+
+
+
+    5) S5 = N5 - N2
+    S5 = (-91) - (120)
+
+	1010 0101
+  - 0111 1000
+	=========
+	0010 1101
+
+	Luego CF=0 y OF=1. Como la resta se fue del rango, es decir, suma de negativos dió positivo.
+se prende la OF.

@@ -1,0 +1,2 @@
+Es necesario usar gdb ya que queremos obtener resultados de 32 bits y el
+retorno de gdb al igual que la variable de estado de la terminal es de 8.

@@ -1,0 +1,16 @@
+para compilar: gcc -g -o nombre_ejecutable nombre_archivo.s flags (flags: -pg -no-pie, etc)
+observacion: es necesario tener una funcion main en el archivo.s
+para debuggear: gdb ./nombre_ejecutable -> br main (o punto de corte que se quiera ver) -> r -> n ... n
+observacion: se pueden escribir comentarios con // o /* */ linea única o multilinea resp
+
+// Ejercicio 2 Plancha 2
+para ver retorno con echo debemos ejecutar los siguientes comandos en la terminal:
+    *./nombre_ejecutable // ejecutamos el programa, obviamente previamente compilado.
+    *retorno=$? // donde $? es la variable de entorno
+    *echo "El codigo de retorno es $retorno" // una buena observacion es el argumento que toma echo. una string con las variables precedidas de $ 
+    *El codigo de retorno es $retorno // lo que imprime echo donde $retorno va a ser lo que esta adentro de la variable.
+para ver retorno en gdb: 
+    *gdb ./nombre_ejecutable // ejecutamos el comando para debuggear con gdb.
+    *r // corremos el programa
+    *[... exited with code retorno] // al final de lo que devuelve gdb podemos ver el retorno
+observacion importante: echo imprime el retorno en decimal y gdb en octal.

@@ -1,0 +1,15 @@
+// Ejercicio 2 Plancha 2
+para ver retorno con echo debemos ejecutar los siguientes comandos en la terminal:
+    *./nombre_ejecutable // ejecutamos el programa, previamente compilado.
+    *retorno=$? // donde $? es la variable de entorno
+    *echo "El codigo de retorno es $retorno"
+    *El codigo de retorno es $retorno // lo que imprime echo donde $retorno va a ser lo que esta adentro de la variable.
+para ver retorno en gdb: 
+    *gdb ./nombre_ejecutable // ejecutamos el comando para debuggear con gdb.
+    *r // corremos el programa
+    *[... exited with code retorno] // al final de lo que devuelve gdb podemos ver el retorno
+otra forma de ver el retorno en gdb:
+    *gdb ./nombre_ejecutable // ejecutamos el comando para debuggear con gdb.
+    *ver el valor del registro al en el momento de retorno del codigo.
+observacion: echo imprime el retorno en decimal y gdb en octal.
+observacion: el valor de retorno es el valor contenido en al (los últimos 8 bits de rax).
