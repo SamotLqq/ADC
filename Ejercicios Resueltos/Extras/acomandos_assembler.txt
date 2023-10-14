@@ -14,3 +14,5 @@ para ver retorno en gdb:
     *r // corremos el programa
     *[... exited with code retorno] // al final de lo que devuelve gdb podemos ver el retorno
 observacion importante: echo imprime el retorno en decimal y gdb en octal.
+
+para que lea el main con un data: .text entre data y main
