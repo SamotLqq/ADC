@@ -1,0 +1,27 @@
+ETIQUETA  |     DIRECCIÓN     |    VALOR
+--------------------------------------------
+a         |     0x404028      |   -1
+b         |     0x40402a      |   0xaa    
+b+1       |     0x40402b      |   99
+c         |     0x40402c      |   1.5
+str       |     0x404030      |   "Hola mundo\n"
+
+El valor dado es el valor que se obtiene considerando los tamaños de las etiquetas.
+Es decir:
+a fue declarada como word -> el tamaño de a es 2 bytes -> a esta en el intervalo de memoria [0x404028,0x40402a).
+b fue declarada como un arreglo de dos elementos de un byte cada 1 -> el tamaño de b es 2 bytes -> b esta en el intervalo de memoria [0x40402a, 0x40402c)
+c fue declarada como un float -> el tamaño de c es 4 bytes -> c esta en el intervalo de memoria [0x40402c, 0x404030)
+str fue declarada como asciz -> el tamaño es length(str) + 1 byte(s) = 12 bytes -> str esta en el intervalo de memoria [0x404030, 0x40403c)
+
+Luego de ejecutar la linea indicada:
+
+ETIQUETA  |     DIRECCIÓN     |    VALOR
+--------------------------------------------
+a         |     0x404028      |   "Ho"
+b         |     0x40402a      |   "l"    
+b+1       |     0x40402b      |   "a"
+c         |     0x40402c      |   "\0" 0x00 0xa0 0x3f
+str       |     0x404030      |   "Hola mundo\n"
+
+Concluimos que podemos pisar los datos definidos por nosotros mismos en pila
+y es una acción aceptada ya que no genera avisos ni errores.
