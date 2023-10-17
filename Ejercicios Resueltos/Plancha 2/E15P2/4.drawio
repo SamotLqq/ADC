@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" modified="2023-10-17T14:13:19.162Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0" etag="1PGaFJJa5dEZ2Y_dRQla" version="22.0.4" type="device">
+  <diagram name="Página-1" id="DoknULO7EmkPJQEFJ1Kg">
+    <mxGraphModel dx="1364" dy="795" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Para resolver ejercicio a generamos el archivo 15.s equivalente a 15.c a través del comando &quot;gcc -S 15.c ...&quot;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;En el archivo podemos ver que los argumentos 7 y 8 son pasados a pila con el comando pushq lo que está dandoles 8 bytes de tamaño. por otro lado los demas argumentos ocupan el espacio que deben (char 1 byte, short 2 bytes, int 4 bytes, long 8 bytes) y esto se puede ver cuando se pasan los argumentos de los registros a pila en el archivo generado.&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Por otro lado, para hallar las direcciones hicimos lo siguiente:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;*gdb ./ejecutable_de_15.s.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;*br en la linea&amp;nbsp; &quot;call f&quot; (br 119).&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;*step para meternos dentro de la funcion.&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;*next hasta que todos los registros sean guardados en pila&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;*verificación de que los registros en pila coincidan con las ubicaciones dadas en código (lineas 23 a 43 de 15.s)&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" placeholders="1" name="Variable" id="I3DyPHtSJMSKKe93r4n9-3">
+          <mxCell style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="1">
+            <mxGeometry x="106" y="220" width="616" height="400" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="I3DyPHtSJMSKKe93r4n9-4" value="Observaciones" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="204" y="30" width="420" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="I3DyPHtSJMSKKe93r4n9-5" value="Ejercicio 15a" style="text;strokeColor=#82b366;fillColor=#d5e8d4;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="334" y="161" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="I3DyPHtSJMSKKe93r4n9-6" value="Ejercicio 15b" style="text;strokeColor=#82b366;fillColor=#d5e8d4;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="334" y="640" width="160" height="40" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Para resolver ejercicio b basta con ver la ubicación de la dirección de retorno en la sección convención de funciones en el apunte (rbp + 8) y con gdb verificarla.&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" placeholders="1" name="Variable" id="I3DyPHtSJMSKKe93r4n9-7">
+          <mxCell style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="1">
+            <mxGeometry x="106" y="710" width="616" height="70" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;No hace falta seguir analizando la pila luego de las lineas analizadas, ya que, las llamadas a printf, por convención de llamada, no modificaran datos por encima del rsp en la pila&lt;font&gt; y nuestros argumentos estarán a salvo. Además como las llamadas a printf solo usan dos argumentos ya no se usará la pila para argumentos de funciones conocidas, solo se usarán los registros rsi y rdi.&lt;br&gt;&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;font&gt;&lt;br&gt;&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;" placeholders="1" name="Variable" id="I3DyPHtSJMSKKe93r4n9-9">
+          <mxCell style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="1">
+            <mxGeometry x="106" y="880" width="616" height="140" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="I3DyPHtSJMSKKe93r4n9-10" value="Generales" style="text;strokeColor=#82b366;fillColor=#d5e8d4;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="334" y="810" width="160" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

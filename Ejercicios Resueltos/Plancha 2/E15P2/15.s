@@ -48,6 +48,7 @@ f:
 	movq	%rax, %rdi # primer argumento la cadena de formato
 	movl	$0, %eax # 0 argumentos flotantes
 	call	printf@PLT
+	# idem a la primera ejecución de printf pero con los argumentos correspondientes en rdi y rsi.
 	leaq	-8(%rbp), %rax
 	movq	%rax, %rsi
 	leaq	.LC1(%rip), %rax
@@ -107,8 +108,8 @@ main:
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
-	pushq	$8
-	pushq	$7
+	pushq	$8 # argumento 8, 8 bytes
+	pushq	$7 # argumento 7, 7 bytes
 	movl	$6, %r9d
 	movl	$53, %r8d
 	movl	$4, %ecx
