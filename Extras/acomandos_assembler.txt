@@ -2,6 +2,7 @@ para compilar: gcc -g -o nombre_ejecutable nombre_archivo.s flags (flags: -pg -n
 observacion: es necesario tener una funcion main en el archivo.s
 para debuggear: gdb ./nombre_ejecutable -> br main (o punto de corte que se quiera ver) -> r -> n ... n
 observacion: se pueden escribir comentarios con // o /* */ linea única o multilinea resp
+para continuar al siguiente breakpoint: c (continue)
 
 // Ejercicio 2 Plancha 2
 para ver retorno con echo debemos ejecutar los siguientes comandos en la terminal:
