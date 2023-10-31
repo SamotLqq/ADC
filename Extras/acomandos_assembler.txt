@@ -4,7 +4,6 @@ para debuggear: gdb ./nombre_ejecutable -> br main (o punto de corte que se quie
 observacion: se pueden escribir comentarios con // o /* */ linea única o multilinea resp
 para continuar al siguiente breakpoint: c (continue)
 
-// Ejercicio 2 Plancha 2
 para ver retorno con echo debemos ejecutar los siguientes comandos en la terminal:
     *./nombre_ejecutable // ejecutamos el programa, obviamente previamente compilado.
     *retorno=$? // donde $? es la variable de entorno
@@ -17,3 +16,11 @@ para ver retorno en gdb:
 observacion importante: echo imprime el retorno en decimal y gdb en octal.
 
 para que lea el main con un data: .text entre data y main
+
+para imprimir las direcciones de memoria podemos agrupar de a 1, 2, 4 u 8 bytes en el comando examine, estos son los comandos:
+	1 byte: x/nbx dir
+	2 bytes: x/nhx dir
+	4 bytes: x/nwx dir
+	8 bytes: x/ngx dir
+	donde la n antes del tamaño del bloque indica que queremos que nos imprmia n bloques del tamaño posterios a partir de dir. 
+	la x al final es el formato de impresion que puede ser x, f, d, t y algunos mas.
