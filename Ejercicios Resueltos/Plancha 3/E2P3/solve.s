@@ -78,5 +78,5 @@ A⁻¹ = [d/det(A) -b/det(A)] = [d/(ad-bc) -b/(ad-bc)]
       [-c/det(A) a/det(A)] = [-c/(ad-bc) a/(ad-bc)]
 
 y podemos usar el resultado que nos dice que el sistema Ax = b tiene solucion unica si y solo si det(A) != 0
-asi que lo primero que haremos es calcular ad-bc si esto es 0 terminamos y teronamos -1, si es distinto a 0 cargamos 1 en rax y resolvemos el sistema mediante el metodo planteado.
+asi que lo primero que haremos es calcular ad-bc si esto es 0 terminamos y retornamos -1, si es distinto a 0 cargamos 0 en rax y resolvemos el sistema mediante el metodo planteado.
 */
