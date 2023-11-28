@@ -23,4 +23,5 @@ para imprimir las direcciones de memoria podemos agrupar de a 1, 2, 4 u 8 bytes 
 	4 bytes: x/nwx dir
 	8 bytes: x/ngx dir
 	donde la n antes del tamaño del bloque indica que queremos que nos imprmia n bloques del tamaño posterios a partir de dir. 
-	la x al final es el formato de impresion que puede ser x, f, d, t y algunos mas.
+	la x al final es el formato de impresion que puede ser x, f, d, t y algunos mas. por otro lado las letras del medio
+    b, h, w, g indican byte, short, double word, quad respectivamente.

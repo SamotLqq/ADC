@@ -1,0 +1,10 @@
+para imprimir registros en valores distintos a complemento a dos en decimal podemos usar el siguiente comando:
+
+p/FLAG $registro
+
+donde registro es rax por ejemplo y FLAG puede ser:
+o: octal
+x: hexa
+c: ascci (caracteres)
+t: binario
+y si se quiere en decimal solo no hay que agregar banderas, ie, p $registro.
