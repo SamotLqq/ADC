@@ -102,6 +102,7 @@ nro sumar_nro(nro N1, nro N2) { // [1101] [1001] -> 1[0110]
 }
 // para que funcione (ademas de cambiar los corrimientos, suma y restas a las funciones definidad) deberiamos
 // definir la resta o generalizarlo para enteros asi podemos hacer -1.
+// lo siguiente es un pseudo codigo:
 // nro multiplicar_nro(nro N1, nro N2) {
 //     int cero = 0;
 //     int uno = 0;

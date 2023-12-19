@@ -26,7 +26,7 @@ int myisnan2(float f) { // como f!=f da 0 para todo numero representable y 1 par
 // muchas configuraciones de bits distintas de NAN mientras que de +inf una sola.
 
 // g)
-// si sumamos un valor finito a +inf nos devuelve +inf. si sumamos -inf a +inf nos da NAN. si sumamos NAN a +inf da +inf.
+// si sumamos un valor finito a +inf nos devuelve +inf. si sumamos -inf a +inf nos da NAN. si sumamos NAN a +inf da NAN.
 
 
 int main(void) {
